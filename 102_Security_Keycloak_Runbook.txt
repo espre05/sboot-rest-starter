@@ -1,0 +1,6 @@
+http://www.keycloak.org/
+
+- download and run in jboss
+- Think of creating a springboot version
+Download tomact adaptor too.
+

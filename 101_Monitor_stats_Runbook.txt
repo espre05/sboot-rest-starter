@@ -1,0 +1,16 @@
+Enable actuator: spring-boot-starter-actuator
+
+Check:
+http://localhost:8081/autoconfig
+http://localhost:8081/beans
+
+http://localhost:8081/configprops
+
+http://localhost:8081/dump
+http://localhost:8081/env
+http://localhost:8081/health
+http://localhost:8081/info
+http://localhost:8081/metrics
+http://localhost:8081/mappings
+http://localhost:8081/shutdown1
+http://localhost:8081/trace

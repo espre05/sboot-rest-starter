@@ -1,0 +1,30 @@
+#### java8 3#####
+https://store.docker.com/profiles/espre06/content/sub-1f64a65d-792c-4de1-ae62-3b0b51524b73
+
+
+Java is installed in /usr/java/latest and the java, javac and jar binaries are available in the path via the alternatives tool.
+
+
+#see docker/sboot-app/Dockerfile
+docker pull store/oracle/serverjre:8
+
+
+#Copy the sboot-sdrest-0.0.1-SNAPSHOT.jar to docker/sboot-app dir
+mvn clean; mvn package
+cp target/sboot-sdrest-0.0.1-SNAPSHOT.jar docker/sboot-app
+docker build -t prem/sboot-app:0.1 docker/sboot-app/Dockerfile
+# prem/sboot-app:0.1 -- docker
+
+OR -- USE MVN  -- NO Not recommended
+
+
+# test sboot image
+docker run -p 8081:8081 -t --name sboot-app --rm prem/sboot-app:latest
+docker run -p 8081:8081 -t --name sboot-app --rm prem/sboot-app:0.1
+
+
+#Troubleshoot 
+- oauth not redirecting back to app in 
+
+
+
