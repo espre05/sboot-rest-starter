@@ -56,9 +56,10 @@ class SecurityKeycloakConfig extends KeycloakWebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		super.configure(http);
-		http.authorizeRequests().antMatchers("/").permitAll() // allow index.html
-				.antMatchers("/products*").hasRole("user") // USER role can access Webapp ui : /products
-				.antMatchers("/api/v1/persons*").hasRole("admin") // ADMIN role can access rest endpt /api/v1
+		http.authorizeRequests() //
+				.antMatchers("/").permitAll() // allow index.html
+				.antMatchers("/products*").hasAnyRole("role_user", "role_admin") // USER&ADMIN role can access Webapp ui : /products
+				.antMatchers("/api/v1/persons*").hasRole("role_admin") // ADMIN role can access rest endpt /api/v1
 				.anyRequest().permitAll();
 	}
 
@@ -76,7 +77,6 @@ class SecurityKeycloakConfig extends KeycloakWebSecurityConfigurerAdapter {
 				.getUserPrincipal()).getCredentials());
 		;
 		return ksk;
-
 	}
 
 }
