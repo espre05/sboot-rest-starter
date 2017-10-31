@@ -1,0 +1,11 @@
+Managing and monitoring 
+
+http://www.kai-waehner.de/blog/2013/07/15/apache-camel-and-talend-esb-management-and-monitoring-of-integration-routes-and-soap-rest-web-services-jmx-osgi-logstash-elasticsearch-kibana-hawtio/
+
+Talend admin center? 
+
+Log shipping? : Logstash
+
+ElasticSearch? : For searching through logs?
+
+Kibabna : For analytics of the web?
